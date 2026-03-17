@@ -4,6 +4,7 @@ Ongoing project to implement various LinkedList functionalities and grasp the un
 Implemented:
 - append_left / append_right
 - pop_right (with edge case handling)
+- pop_left
 
 Learning Goals:
 - Understanding next pointers.
