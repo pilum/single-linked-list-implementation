@@ -35,7 +35,7 @@ class LinkedList():
         n.next = self.head
         self.head = n
 
-    def pop_right(self, n: Node) -> Node:
+    def pop_right(self) -> Node:
         """Removes the last Node of a LinkedList. If the LinkedList is empty it returns None. If the LinkedList contains only
         one Node it removes and returns the head node.
 
@@ -62,6 +62,19 @@ class LinkedList():
 
         return val
 
+    def pop_left(self) -> Node:
+        """Removes the first (head) Node of the LinkedList.
+
+        Returns:
+            Node: Node Object which got removed from the head of the LinkedList.
+        """
+        if self.head == None:
+            return None
+
+        val = self.head
+        self.head = self.head.next
+        return val
+
 
 
 linked_list = LinkedList()
@@ -73,8 +86,9 @@ linked_list.append_right(n1)
 linked_list.append_right(n2)
 linked_list.append_right(n3)
 
-old_n3 = linked_list.pop_right(n3)
-
 print(n1.next)
 print(n2.next)
-print(old_n3.value)
+print(n3.next)
+
+x = linked_list.pop_left()
+print(x.value)
